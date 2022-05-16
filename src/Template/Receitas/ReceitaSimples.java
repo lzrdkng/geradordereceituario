@@ -1,0 +1,22 @@
+package Template.Receitas;
+
+import Template.Modelo.Atendimento;
+
+import java.util.List;
+
+public class ReceitaSimples extends GeradorReceita{
+    @Override
+    protected String gerarCorpo(Atendimento remedios) {
+        StringBuilder corpo = new StringBuilder();
+        corpo.append("Tomar remédios: "+remedios.getNomeRemedio()+"\nDurante: "+
+                remedios.getDias()+" dia(s)\n"+"de "+remedios.getHoras()+" em "+
+                remedios.getHoras()+"hora(s)");
+        return corpo.toString();
+    }
+
+    @Override
+    protected void mostrarNaTela(String cabecalho, String corpo) {
+        System.out.println(cabecalho);
+        System.out.println(corpo);
+    }
+}
