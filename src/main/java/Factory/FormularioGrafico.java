@@ -1,4 +1,4 @@
-package Template.Factory;
+package Factory;
 
 import Template.Modelo.Atendimento;
 

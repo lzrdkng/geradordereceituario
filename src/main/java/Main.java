@@ -1,4 +1,4 @@
-import Template.Factory.FormularioGrafico;
+import Factory.FormularioGrafico;
 
 public class Main {
     public static void main(String[] args) {

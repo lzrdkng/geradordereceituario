@@ -9,7 +9,10 @@ import com.lowagie.text.pdf.PdfWriter;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
+
 public class ReceitaPDF extends GeradorReceita{
+
+
     @Override
     public String gerarCorpo(Atendimento remedios) {
         StringBuilder corpo = new StringBuilder();
@@ -25,9 +28,12 @@ public class ReceitaPDF extends GeradorReceita{
     @Override
     public void mostrarNaTela(String cabecalho, String corpo) {
         Document receitaPDF = new Document();
+
+
         try{
             PdfWriter.getInstance(receitaPDF,
-                    new FileOutputStream("Receita.pdf"));
+                    new FileOutputStream("receita.pdf"));
+
             receitaPDF.open();
 
             Paragraph paragrafoCabecalho = new Paragraph(cabecalho);
@@ -41,5 +47,10 @@ public class ReceitaPDF extends GeradorReceita{
         } catch(FileNotFoundException exce){
             exce.printStackTrace();
         }
+
     }
+
 }
+
+
+
