@@ -8,9 +8,12 @@ public class ReceitaSimples extends GeradorReceita{
     @Override
     protected String gerarCorpo(Atendimento remedios) {
         StringBuilder corpo = new StringBuilder();
-        corpo.append("Tomar remédios: "+remedios.getNomeRemedio()+"\nDurante: "+
+        corpo.append("Tomar remédio(s): "+remedios.getNomeRemedio()+"\n" +
+                remedios.getQuantidadeDeComprimidos()
+                +" Comprimido(s)"+
+                "\nDurante: "+
                 remedios.getDias()+" dia(s)\n"+"de "+remedios.getHoras()+" em "+
-                remedios.getHoras()+"hora(s)");
+                remedios.getHoras()+" hora(s)");
         return corpo.toString();
     }
 

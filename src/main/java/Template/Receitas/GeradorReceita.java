@@ -7,17 +7,17 @@ import Template.Modelo.Atendimento;
 
 public abstract class GeradorReceita {
     public final void gerarReceitas(Atendimento remedios){
-        String cabecalho = this.gerarCabecalho();
+        String cabecalho = this.gerarCabecalho(remedios);
         String corpo = this.gerarCorpo(remedios);
         this.mostrarNaTela(cabecalho, corpo);
     }
 
-    protected String gerarCabecalho(){
+    protected String gerarCabecalho(Atendimento remedios){
         SimpleDateFormat data = new SimpleDateFormat("d/M/y");
         return new String("RECEITUÁRIO \n" +
-                "Paciente: "+
-                "Médico: \n"+
-                "Registro: \n"+ "Unidade de saúde: \n"+"Data: "+
+                "Paciente: "+ remedios.getNomePaciente()+
+                "\nMédico: "+ remedios.getNomeMedico()+
+                 "\nData: "+
                 data.format(new Date()));
     }
 
