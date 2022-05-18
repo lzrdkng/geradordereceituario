@@ -12,7 +12,7 @@ public abstract class GeradorReceita {
         this.mostrarNaTela(cabecalho, corpo);
     }
 
-    protected String gerarCabecalho(Atendimento remedios){
+    public String gerarCabecalho(Atendimento remedios){
         SimpleDateFormat data = new SimpleDateFormat("d/M/y");
         return new String("RECEITUÁRIO \n" +
                 "Paciente: "+ remedios.getNomePaciente()+

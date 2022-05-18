@@ -1,4 +1,4 @@
-package Factory;
+package Template.Factory;
 
 import Template.Modelo.Atendimento;
 
@@ -90,7 +90,7 @@ public class FormularioGrafico extends JFrame {
                 String horasValor = jtfHoras.getText();
                 String quantidadeComprimidosValor = jtfQuantidadeComprimidos.getText();
                 Atendimento atendimento = new Atendimento(remedioValor, nomePacienteValor, nomeMedicoValor, quantidadeComprimidosValor, diasValor, horasValor );
-                System.out.println(atendimento.getDias());
+                Opcoes.escolherOpcoes(atendimento);
             }
         });
             

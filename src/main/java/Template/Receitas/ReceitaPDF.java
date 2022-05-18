@@ -11,7 +11,7 @@ import java.io.FileOutputStream;
 
 public class ReceitaPDF extends GeradorReceita{
     @Override
-    protected String gerarCorpo(Atendimento remedios) {
+    public String gerarCorpo(Atendimento remedios) {
         StringBuilder corpo = new StringBuilder();
         corpo.append("Tomar remédio(s): "+remedios.getNomeRemedio()+"\n" +
                 remedios.getQuantidadeDeComprimidos()
@@ -23,7 +23,7 @@ public class ReceitaPDF extends GeradorReceita{
     }
 
     @Override
-    protected void mostrarNaTela(String cabecalho, String corpo) {
+    public void mostrarNaTela(String cabecalho, String corpo) {
         Document receitaPDF = new Document();
         try{
             PdfWriter.getInstance(receitaPDF,

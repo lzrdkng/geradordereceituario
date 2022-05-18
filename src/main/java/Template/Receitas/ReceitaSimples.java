@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ReceitaSimples extends GeradorReceita{
     @Override
-    protected String gerarCorpo(Atendimento remedios) {
+    public String gerarCorpo(Atendimento remedios) {
         StringBuilder corpo = new StringBuilder();
         corpo.append("Tomar remédio(s): "+remedios.getNomeRemedio()+"\n" +
                 remedios.getQuantidadeDeComprimidos()
@@ -18,7 +18,7 @@ public class ReceitaSimples extends GeradorReceita{
     }
 
     @Override
-    protected void mostrarNaTela(String cabecalho, String corpo) {
+    public void mostrarNaTela(String cabecalho, String corpo) {
         System.out.println(cabecalho);
         System.out.println(corpo);
     }

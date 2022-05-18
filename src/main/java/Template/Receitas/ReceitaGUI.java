@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class ReceitaGUI extends GeradorReceita{
     @Override
-    protected String gerarCorpo(Atendimento remedios) {
+    public String gerarCorpo(Atendimento remedios) {
         StringBuilder corpo = new StringBuilder();
         corpo.append("Tomar remédio(s): "+remedios.getNomeRemedio()+"\n" +
                 remedios.getQuantidadeDeComprimidos()
@@ -18,7 +18,7 @@ public class ReceitaGUI extends GeradorReceita{
     }
 
     @Override
-    protected void mostrarNaTela(String cabecalho, String corpo) {
+    public void mostrarNaTela(String cabecalho, String corpo) {
         JOptionPane.showMessageDialog(null, cabecalho + corpo, "Interface do Receituário",
                 JOptionPane.INFORMATION_MESSAGE);
     }
